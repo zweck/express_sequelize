@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon app/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sequelize": "sequelize"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "koa-router": "^7.2.1",
     "mysql2": "^1.4.2",
     "nodemon": "^1.12.1",
-    "sequelize": "^4.22.1"
+    "sequelize": "^4.22.1",
+    "sequelize-cli": "^3.0.0"
   }
 }

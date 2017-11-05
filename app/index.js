@@ -1,9 +1,9 @@
-const db = require('../db')
 const Koa = require('koa')
+const Router = require('koa-router')
+const db = require('../db')
+
 const app = new Koa()
+const router = new Router()
 
-app.use(async ctx => {
-  ctx.body = 'Hello World'
-})
-
-app.listen(8080)
+app.use(router.routes())
+   .listen(8080)

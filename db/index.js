@@ -1,18 +1,23 @@
 const Sequelize = require('sequelize')
-const config = require('dotenv')
-  .config()
+const config = require('dotenv').config()
 
-const dbConf = config.ENV === 'PRODUCTION' ?
-      require('./config').production :
-      require('./config').development
+const {
+  database,
+  username,
+  password,
+  host,
+  dialect
+} = config.ENV === 'PRODUCTION' ?
+      require('../config/config').production :
+      require('../config/config').development
+
 const sequelize = new Sequelize(
-  dbConf.database,
-  dbConf.username,
-  dbConf.password,
+  database,
+  username,
+  password,
   {
-    host: config.MYSQL_HOST,
-    dialect: 'mysql',
-    port: 3306,
+    host,
+    dialect,
 
     pool: {
       max: 5,
