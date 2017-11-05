@@ -1,0 +1,20 @@
+{
+  "name": "koa_sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "koa": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "mysql2": "^1.4.2",
+    "nodemon": "^1.12.1",
+    "sequelize": "^4.22.1"
+  }
+}
