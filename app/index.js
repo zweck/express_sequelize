@@ -1,9 +1,12 @@
-const Koa = require('koa')
-const Router = require('koa-router')
+const express = require('express')
+const sequelizeRouter = require('sequelize-router')
+
 const db = require('../db')
+const {
+  User
+} = require('../models')
 
-const app = new Koa()
-const router = new Router()
+const app = express()
 
-app.use(router.routes())
-   .listen(8080)
+app.use('/api', sequelizeRouter(User))
+app.listen(8080)
