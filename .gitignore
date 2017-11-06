@@ -65,4 +65,8 @@ config/config.json
 # mysql dirs
 /data
 
+# tempfiles
+*.swp
+\#*.*
+
 # End of https://www.gitignore.io/api/node
